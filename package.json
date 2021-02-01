@@ -1,0 +1,11 @@
+{
+  "name": "frogbot",
+  "version": "1.0.0",
+  "description": "a bot that posts cool frog pictures",
+  "main": "index.js",
+  "author": "a9-i",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
