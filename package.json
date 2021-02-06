@@ -1,11 +1,26 @@
 {
   "name": "frogbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a bot that posts cool frog pictures",
   "main": "index.js",
   "author": "a9-i",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a9-i/frog"
+  },
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
   }
 }

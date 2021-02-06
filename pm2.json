@@ -1,0 +1,7 @@
+{
+  "apps": [{
+    "name": "frog-bot",
+    "script": "npm",
+    "args": "run start"
+  }]
+}

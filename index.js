@@ -1,10 +1,12 @@
+require('dotenv').config();
 var fs = require('fs');
 var Discord = require('discord.js');
 var client = new Discord.Client();
+var IMGDIR = './ImgSetOpt'
 
 client.on('ready', () => {
   client.user.setActivity('.frog | frog.wtf', { type: 'PLAYING' });
-  console.log(`[Logged in as ${client.user.tag}!`);
+  console.log(`- Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', (message) => {
@@ -12,9 +14,9 @@ client.on('message', (message) => {
   if (message.channel.type === 'dm') return;
 
   if (message.content.startsWith('.frog') || message.content.startsWith('.phrog')) {
-    var frogs = fs.readdirSync('./frogs');
+    var frogs = fs.readdirSync(IMGDIR)
       .map(file => {
-        return `frogs/${file}`;
+        return `${IMGDIR}/${file}`;
       })
 
     message.channel.send({ files: [frogs[Math.floor(Math.random() * (frogs.length - 1))]] });
